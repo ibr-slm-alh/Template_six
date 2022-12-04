@@ -1,0 +1,523 @@
+:root {
+  --blue-color: #0075ff;
+  --blue-alt-color: #0d69d5;
+  --orange-color: #f59e0b;
+  --green-color: #22c55e;
+  --red-color: #f44336;
+  --grey-color: #888;
+}
+*{
+	box-sizing: border-box;
+	 margin: 0;
+    padding: 0;
+}
+body{
+	font-family: 'Open Sans', sans-serif;
+	margin: 0;
+}
+*:focus{
+	outline: none;
+}
+a{
+	text-decoration: none;
+}
+ul{
+	list-style: none;
+}
+.page{
+	display: flex;
+	background-color: #eee;
+	min-height: 100vh;
+}
+
+/*Start Sidebar*/
+.sidebar{
+	width: 220px;
+	background-color: rgb(75 74 74 / 90%);
+}
+.sidebar h1{
+	font-size: 18px;
+    text-align: center;
+    padding: 19px;
+    color: #eee;
+}
+@media(max-width: 767px){
+	.sidebar{
+		width: 172px;
+	}
+	.sidebar h1{
+		font-size: 10px;
+    	padding-top: 25px;
+	}
+}
+.sidebar ul{
+	text-align: center;
+    color: #fff;
+    font-size: 10px;
+    margin-bottom: 10px;
+}
+@media(max-width: 767px){
+	.sidebar ul{
+		    font-size: 6px;
+	}
+	.sidebar ul li:hover{
+    font-size: 10px;
+    color: blue;
+    background-color: rgb(106 113 230 / 0.3);
+    border-radius: 15px;
+    height: 25px;
+}
+}
+.sidebar ul li{
+    margin-bottom: 10px;
+    transition: 0.3s;
+}
+.sidebar ul li:hover{
+    font-size: 20px;
+    color: blue;
+    background-color: rgb(106 113 230 / 0.3);
+    border-radius: 15px;
+    height: 25px;
+}
+@media(max-width: 767px){
+	.sidebar ul li:hover{
+    font-size: 10px;
+    color: blue;
+    background-color: rgb(106 113 230 / 0.3);
+    border-radius: 15px;
+    height: 15px;
+}
+}
+/*End Sidebar*/
+/*Start Content*/
+.content{
+	display: block;
+	width: 100%;
+}
+.content .header{
+	padding: 20px;
+    display: flex;
+    border-bottom: 2px solid #d6d6d6;
+}
+.content .header .left{
+	flex: 1;
+	padding: 10px;
+}
+.content .header .left i,.content .header .left span{
+	font-size: 20px;
+    margin-left: 5px;
+}
+@media(max-width: 767px){
+	.content .header .left i,.content .header .left span{
+		font-size: 10px;
+		margin-left: 0;
+	}
+}
+.content .header .right{
+	flex: 1;
+}
+.content .header .right i{
+	position: absolute;
+    top: 35px;
+    padding-left: 15px;
+}
+.content .header .right input{
+	width: 80%;
+    border: 3px solid #eee;
+    border-radius: 10px;
+    padding: 10px;
+    text-align: center;
+}
+@media(max-width: 767px){
+	.content .header .right i{
+		top: 31px;
+    	padding-left: 5px;
+	}
+	.content .header .right input{
+		width: 90%;
+		font-size: 10px;
+	}
+}
+.cards{
+	display: block;
+}
+.cards .full-cards{
+	width: 100%;
+	height: 300px;
+	padding: 20px;
+}
+@media(max-width: 767px){
+	.cards .full-cards{
+			margin-bottom: 220%
+		}
+}
+.cards .full-cards .card{
+	background-color: white;
+    width: 100%;
+    height: 100%;
+    border: 2px solid #eee;
+    border-radius: 20px;
+    display: flex;
+}
+@media(max-width: 767px){
+	.cards .full-cards .card{
+	display: block;
+    background: none;
+    margin: -5% -8%;
+    border: none;
+}
+}
+/*End Content*/
+/*Start Animation ball*/
+.cards .full-cards .card .parent{
+	width: 210px;
+    background-color: #736969;
+    height: 210px;
+    margin: 20px;
+    border-radius: 10px;
+    margin-left: 51px;
+}
+.cards .full-cards .card .parent .child-01{
+	width: 50px;
+    height: 50px;
+    border: 5px solid red;
+    border-radius: 50%;
+    background-color: red;
+    transition: transform 1s ease-in;
+    animation: left-to-right 5s ease-in infinite forwards ;
+}
+.cards .full-cards .card .parent .child-02{
+	margin-top: 10px;
+    margin-left: 39%;
+    height: 50px;
+    width: 50px;
+    border: 1px solid #e2e2e2;
+    border-radius: 50%;
+    animation: bounce 0.9s infinite;
+    background-color: yellow;
+}
+.cards .full-cards .card .parent .child-03{
+	width: 100px;
+    height: 20px;
+    background-color: #736969;
+    margin: auto;
+    margin-top: 45%;
+    border-top-right-radius:15px;
+	border-bottom-right-radius:15px;
+}
+@media(max-width: 767px){
+	.cards .full-cards .card .parent .child-03{
+		margin-top: 10%;
+	}
+}
+.cards .full-cards .card .parent .child-03 i{
+	font-size: 160px;
+	rotate: 90deg;
+    margin-top: -90px;
+    margin-left: -5px;
+}
+@media(max-width: 767px){
+	.cards .full-cards .card .parent .child-03 i{
+		margin-top: 0;
+	}
+}
+.cards .full-cards .card .parent .child-03 div{
+	height: 100%;
+	width: 0;
+	background-color: black;
+	border-top-right-radius:15px;
+	border-bottom-right-radius:15px;
+	animation: change-width 5s ease-in infinite forwards;
+}
+@media(max-width: 767px){
+.cards .full-cards .card .parent .child-03 div{
+    height: 2.5%;
+    position: absolute;
+    width: 0;
+    top: 635.5px;
+    max-width: 94px;
+	}
+}
+.cards .full-cards .card .parent .child-04 div{
+	color: #fff;
+    text-align: center;
+    margin-top: 45%;
+    font-size: 25px;
+    font-weight: 800;
+}
+@media(max-width: 767px){
+.cards .full-cards .card .parent .child-04 div{
+	position: absolute;
+    bottom: -80px;
+}
+}
+.cards .full-cards .card .parent .child-04 div .title-word {
+  animation: color-animation 4s linear infinite;
+}
+
+.cards .full-cards .card .parent .child-04 div .title-word-1 {
+  --color-1: #DF8453;
+  --color-2: #3D8DAE;
+  --color-3: #E4A9A8;
+}
+
+.cards .full-cards .card .parent .child-04 div .title-word-2 {
+  --color-1: #DBAD4A;
+  --color-2: #ACCFCB;
+  --color-3: #17494D;
+}
+
+.cards .full-cards .card .parent .child-04 div .title-word-3 {
+  --color-1: #ACCFCB;
+  --color-2: #E4A9A8;
+  --color-3: #ACCFCB;
+}
+
+.cards .full-cards .card .parent .child-04 div .title-word-4 {
+  --color-1: #3D8DAE;
+  --color-2: #DF8453;
+  --color-3: #E4A9A8;
+}
+/*End Animation ball*/
+.cards .grid-cards{
+	display: grid;
+	grid-template-columns: 800px 300px;
+	padding: 20px;
+	margin: 20px;
+	gap:20px;
+	background-color: #fff;
+    border-radius: 15px;
+}
+@media(max-width: 767px){
+	.cards .grid-cards{
+		display: block;
+	    background: none;
+	    width: 250px;
+	    margin-left: 28px;
+	}
+}
+.cards .grid-cards .right{
+	background-color: #736969;
+	border-radius: 10px;
+}
+.cards .grid-cards .left{
+	background-color: #736969;
+	border-radius: 10px;
+	display: grid;
+	grid-template-columns:repeat(auto-fill,minmax(250px,1fr));
+	gap:10px;
+}
+@media(max-width: 767px){
+	.cards .grid-cards .left div:not(:last-child){
+		border-bottom: 5px solid #eee;
+	}
+}
+@media(max-width: 767px){
+	.cards .grid-cards .left div:not(:last-child):hover{
+		border-bottom: none;
+	}
+}
+.cards .grid-cards .left div{
+	height: 260px;
+    padding: 50% 15%;
+    color: #fff;
+    font-size: 12px;
+    font-weight: 800;
+}
+.cards .grid-cards .left .box-01:hover{
+	letter-spacing: 20px;
+	color: #d66e1e;
+	transition: 5s;
+}
+.cards .grid-cards .left .box-02:hover{
+	rotate:-360deg;
+	transition: 5s;
+}
+.cards .grid-cards .left .box-03:hover{
+	font-size: 16px;
+    opacity: 0.7;
+    color: yellow;;
+	transition: 5s;
+}
+@media(max-width: 767px){
+.cards .grid-cards .left .box-03:hover{
+	font-size: 15px;
+}
+}
+.cards .grid-cards .left .box-04:hover{
+	font-size: 25px;
+	color: black;
+	width: 50%;
+	transition: 5s;
+	rotate:-25deg;
+}
+.cards .grid-cards .left .box-05:hover{
+	rotate:-60deg;
+	font-size: 15px;
+	transition: 5s;
+	color: #a558d6;
+
+}
+.cards .grid-cards .left .box-06:hover{
+	rotate:60deg;
+	transition: 5s;
+}
+@media(max-width:  767px){
+.cards .grid-cards .right{
+	margin-top: 30px;	
+}
+}
+.cards .grid-cards .right .btn-01{
+	width: 300px;
+	height: 100px;
+	border:none;
+	color: white;
+	background-color: rgb(255,0,68);
+	border-radius: 6px;
+	box-shadow: inset 0 0 0 0 #f9e506;
+	transition: ease-out 0.3s;
+	font-size: 2rem;
+	outline: none;
+	margin-bottom: 5px;
+}
+.cards .grid-cards .right .btn-01:hover{
+	box-shadow: inset 300px 0 0 0 #f9e506;
+	cursor: pointer;
+	color: #000;
+}
+.cards .grid-cards .right .btn-02{
+	width: 300px;
+	height: 100px;
+	border:none;
+	color: white;
+	border-radius: 6px;
+	transition: ease-out 4s;
+	font-size: 2rem;
+	outline: none;
+	border:3px solid #42fbf2;
+	position: relative;
+	z-index: 1;
+	margin-bottom: 6px;
+}
+.cards .grid-cards .right .btn-02:hover{
+	color: $fff;
+	cursor: pointer;
+}
+.cards .grid-cards .right .btn-02::before{
+	transition: 0.5s all ease;
+	position: absolute;
+	top: 0;
+	left: 50%;
+	right: 50%;
+	bottom: 0;
+	opacity: 0;
+	content: "";
+	background-color: #42fbf2;
+}
+.cards .grid-cards .right .btn-02:hover::before{
+	transition: 0.5s all ease;
+	left: 0;
+	right:0;
+	opacity: 1;
+	z-index: -1;
+}
+.cards .grid-cards .right .btn-03,.cards .grid-cards .right .btn-04,.cards .grid-cards .right .btn-05{
+	width: 300px;
+	height: 100px;
+	border:none;
+	color: white;
+	border-radius: 6px;
+	transition: ease-out 2s;
+	font-size: 2rem;
+	outline: none;
+	margin-bottom: 5px;
+}
+.cards .grid-cards .right .btn-03{
+	background-color: #a7a7f1;
+}
+.cards .grid-cards .right .btn-03:hover{
+	background-color: rgb(230 230 251 / 1);
+	color: black;
+}
+.cards .grid-cards .right .btn-04{
+	background-color: #84f884;
+}
+.cards .grid-cards .right .btn-04:hover{
+	color: black;
+	background-color: #d7f9d7;
+}
+.cards .grid-cards .right .btn-05{
+	background-color: #f5f58f;
+}
+.cards .grid-cards .right .btn-05:hover{
+	color: black;
+	background-color: #ffffd6;
+}
+@media(max-width: 767px){
+	.cards .grid-cards .right .btn-01,.cards .grid-cards .right  .btn-02,
+	.cards .grid-cards .right  .btn-03,
+	.cards .grid-cards .right  .btn-04,
+	.cards .grid-cards .right  .btn-05{
+		width: 211px;
+	}
+}
+
+/*Animation*/
+@keyframes left-to-right{
+	0%{
+		transform: translateX(0);
+	}
+	25%{
+		transform: translateY(320%);
+	}
+	50%{
+		transform: translateX(320%) translateY(320%);
+	}
+	75%{
+		transform: translateX(320%);
+	}
+	100%{
+		transform: translateX(0) translateY(0);
+	}
+}
+
+@keyframes bounce{
+	10%{
+		height: 50px;
+		width: 50px;
+	}
+	30%{
+		height: 50px;
+		width: 40px;
+	}
+	50%{
+		height: 30px;
+		width: 57px;
+		transform: translateY(170px);
+	}
+	75%{
+		height: 50px;
+		width: 57px;
+	}
+	100%{
+		transform: translateY(0;);
+	}
+}
+@keyframes change-width{
+	0%{
+		width: 0px;
+	}
+	100%{
+		width: 100%;
+	}
+}
+@keyframes color-animation {
+  0%    {color: var(--color-1)}
+  32%   {color: var(--color-1)}
+  33%   {color: var(--color-2)}
+  65%   {color: var(--color-2)}
+  66%   {color: var(--color-3)}
+  99%   {color: var(--color-3)}
+  100%  {color: var(--color-1)}
+}
+/*Animation*/
