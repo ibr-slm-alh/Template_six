@@ -175,7 +175,7 @@ ul{
     height: 210px;
     margin: 20px;
     border-radius: 10px;
-    margin-left: 51px;
+    margin-left: 73px;
 }
 .cards .full-cards .card .parent .child-01{
 	width: 50px;
@@ -283,7 +283,7 @@ ul{
 	display: grid;
 	grid-template-columns: 800px 300px;
 	padding: 20px;
-	margin: 20px;
+	margin: 20px 75px;
 	gap:20px;
 	background-color: #fff;
     border-radius: 15px;
