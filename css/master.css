@@ -95,9 +95,10 @@ ul{
 	width: 100%;
 }
 .content .header{
-	padding: 20px;
+    padding: 20px;
     display: flex;
     border-bottom: 2px solid #d6d6d6;
+    background-color: #eee;
 }
 .content .header .left{
 	flex: 1;
@@ -140,6 +141,11 @@ ul{
 }
 .cards{
 	display: block;
+}
+@media(max-width: 767px){
+	.cards{
+		background-color: #eee;
+	}
 }
 .cards .full-cards{
 	width: 100%;
