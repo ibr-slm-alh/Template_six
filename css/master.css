@@ -248,7 +248,7 @@ ul{
 @media(max-width: 767px){
 .cards .full-cards .card .parent .child-04 div{
 	position: absolute;
-    bottom: -80px;
+    bottom: -20%;
 }
 }
 .cards .full-cards .card .parent .child-04 div .title-word {
